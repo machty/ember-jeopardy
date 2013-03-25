@@ -1,9 +1,13 @@
 @import reset
+@import bourbon
+
+$blue: #101a7c
+
+=backface-visibility($v)
+  +prefixer(backface-visibility, $v, webkit spec)
 
 html
   height: 100%
-
-$blue: #101a7c
 
 body
   margin: 0
@@ -12,6 +16,11 @@ body
   height: 100%
   color: white
 
+  +backface-visibility(hidden)
+  +transform(translateZ(0))
+  +transform-style(preserve-3d)
+
+
 .application-view
   position: absolute
   left: 0
@@ -19,9 +28,10 @@ body
   width: 100%
   height: 100%
 
-  -webkit-perspective: 1000px
-  -webkit-perspective-origin: 50% 50%
-  -webkit-transform-style: preserve-3d
+  +perspective(1000px)
+  +perspective-origin(50% 50%)
+  +transform-style(preserve-3d)
+
 
 .tile-view
   cursor: pointer
@@ -30,13 +40,13 @@ body
   left: 0
   width: 100%
   height: 100%
-  -webkit-transform-style: preserve-3d
+
+  +transform-style(preserve-3d)
+  +transition(1s ease-in-out all)
 
   text-align: center
-
   font-size: 200px
 
-  -webkit-transition: 1s ease-in-out all
 
   &.selected
     // No visual purpose, just guarantees that selected tiles
@@ -51,11 +61,11 @@ body
 
 
 .side
-  -webkit-backface-visibility: hidden
-  -webkit-transform-style: preserve-3d
 
-  box-sizing: border-box
-  -webkit-box-sizing: border-box
+  +backface-visibility(hidden)
+  +transform-style(preserve-3d)
+  +box-sizing(border-box)
+
   border: 10px solid black
   background: $blue
 
@@ -66,7 +76,8 @@ body
   height: 100%
 
   &.back
-    -webkit-transform: rotateY(180deg)
+
+    +transform(rotateY(180deg))
     .vertical-align-view
       padding: 30px
       font-size: 150px
@@ -76,11 +87,25 @@ body
 .vertical-align-view
   display: table-cell
   vertical-align: middle
-  -webkit-transform-style: preserve-3d
+
 
 .price
   color: #daa520
   text-shadow: 20px 20px black
   font-family: Impact
   font-size: 250px
+
+#github-link
+  position: absolute
+  width: 40px
+  height: 40px
+  background-image: image-url("github_icon.png")
+  display: block
+  top: 7px
+  right: 7px
+  z-index: 5
+  +transition(0.7s ease-in-out opacity)
+  &.hidden
+    opacity: 0
+
 

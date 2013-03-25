@@ -1,3 +1,17 @@
+
+# This is used to determine the vendor-prefixed CSS transform
+# property for controlling the orientation of a grid tile.
+cssPrefixed = (feature) ->
+  Modernizr.prefixed(feature).replace(/([A-Z])/g, (str,m1) -> '-' + m1.toLowerCase()).replace(/^ms-/,'-ms-')
+
+NUM_ROWS = 6
+NUM_COLUMNS = 6
+TRANSFORM = cssPrefixed 'transform'
+
+
+# We wouldn't otherwise need to manually define this class,
+# but we need the outer application view to have a specific
+# class name so it can be stylized to frame the 3D grid.
 Embardy.ApplicationView = Ember.View.extend
   classNames: ['application-view']
 
@@ -5,27 +19,46 @@ Embardy.ApplicationView = Ember.View.extend
 Embardy.TileView = Ember.View.extend
 
   classNames: ['tile-view']
-  attributeBindings: ['style']
+
+  # This makes it so that the when the tile is selected, it
+  # will have a 'selected' class.
   classNameBindings: ['controller.selected']
 
+  # Bind the style attribute to the computed property below.
+  attributeBindings: ['style']
   style: ( ->
+
+    # If this tile is selected, flip it over.
     if @get("controller.selected")
-      return "-webkit-transform: rotateY(180deg)"
+      return "#{TRANSFORM}: rotateY(180deg)"
 
-    row = @get("row")
-    column = @get("column")
-
+    # `viewport` was a property injected into Ember.View inside `viewport.js.coffee`
     tileHeight = @get("viewport.height")
     tileWidth = @get("viewport.width")
 
-    x = Math.round((column - Embardy.NUM_COLUMNS/2) * tileWidth + tileWidth / 2)
-    y = Math.round((row - Embardy.NUM_ROWS/2) * tileHeight + tileHeight / 2)
+    # Calculate where in 3d space the tile should be laid out.
+    # To simplify things, in the 2D world, we set each tile to 
+    # be absolute positioned to fill the screen, so that it's 
+    # width and height equal that of the current browser window size.
+    # We correct this by 3D transforming the tiles to "push" them
+    # back into the screen. Figuring out where they go is just
+    # a simple matter of looking up their rows and columns and
+    # performing the necessary x and y calculations. 
+    row = @get("row")
+    column = @get("column")
+    x = Math.round((column - NUM_COLUMNS/2) * tileWidth + tileWidth / 2)
+    y = Math.round((row - NUM_ROWS/2) * tileHeight + tileHeight / 2)
 
-    "-webkit-transform: translate3d(#{x}px, #{y}px, -5000px)"
+    # The -5000px was chosen by trial and error, and needs to correspond 
+    # with a sensible value for the CSS3 perspective property set
+    # on application-view in application.css.sass. A lower value than
+    # 5000 yielded very bizarre, over-dramatic perspective effects when
+    # the card was flipped over.
+    "#{TRANSFORM}: translate3d(#{x}px, #{y}px, -5000px)"
+
   ).property('viewport.width', 'viewport.height', 'controller.selected')
 
   row: 0
-
   column: Em.computed.alias('controller.column')
 
 

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/thoughtbot/bourbon.git
+  revision: 09e16db7341a549c28820ffceda2107ac2b60b66
+  specs:
+    bourbon (3.1.1)
+      sass (>= 3.2.0)
+      thor
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -132,6 +140,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon!
   coffee-rails (~> 4.0.0.beta1)
   ember-rails
   emblem-rails
