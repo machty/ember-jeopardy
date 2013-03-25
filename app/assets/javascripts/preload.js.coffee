@@ -1,2 +1,0 @@
-window.ENV ||= { EXPERIMENTAL_CONTROL_HELPER: true }
-

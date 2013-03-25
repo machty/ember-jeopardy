@@ -10,15 +10,21 @@ There's no reliance on databases or anything like that; I just chose
 Ember Rails because I'm comfortable with it and wanted more examples of
 Ember Rails setups for people to peruse. 
 
+The questions are populated by `config/questions.yml`.
+
 ## Live Demo
 
-[Check out the live demo.](ember-jeopardy.herokuapp.com)
+[Check out the live demo.](http://ember-jeopardy.herokuapp.com)
 
 ## Works on
 
 Chrome and Safari. Firefox seems to display well enough but the click
 handlers don't seem to be working, possibly due to
 [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=830321).
+
+Also, apparently Chrome might not render some of the tiles on some
+machines; not sure how to fix this, so if you have any ideas, please
+send them my way. A PR would be great too.
 
 New IE might work but haven't tried it yet.
 
