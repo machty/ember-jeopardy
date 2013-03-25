@@ -1,0 +1,8 @@
+.side.front
+  unless answered
+    Embardy.VerticalAlignView
+      span.price $#{price}
+
+.side.back
+  Embardy.VerticalAlignView
+    span = question

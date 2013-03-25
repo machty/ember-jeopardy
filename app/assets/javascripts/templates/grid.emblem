@@ -1,0 +1,7 @@
+each controller itemController="column"
+  view Embardy.CategoryView nameBinding="name"
+
+  / Would like QuestionController to be able to look up
+    properties on this iteration's ColumnController
+  each questions itemController="question" itemViewClass="Embardy.QuestionView" funkBinding="this"
+

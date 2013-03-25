@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EmbardyRails</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= categories_script_tag %>
+
+
+
+  <%= yield %>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</body>
+</html>

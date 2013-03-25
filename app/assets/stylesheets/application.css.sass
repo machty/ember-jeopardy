@@ -1,0 +1,86 @@
+@import reset
+
+html
+  height: 100%
+
+$blue: #101a7c
+
+body
+  margin: 0
+  padding: 0
+  background: $blue
+  height: 100%
+  color: white
+
+.application-view
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+  -webkit-perspective: 1000px
+  -webkit-perspective-origin: 50% 50%
+  -webkit-transform-style: preserve-3d
+
+.tile-view
+  cursor: pointer
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  -webkit-transform-style: preserve-3d
+
+  text-align: center
+
+  font-size: 200px
+
+  -webkit-transition: 1s ease-in-out all
+
+  &.selected
+    // No visual purpose, just guarantees that selected tiles
+    // will be on "top" to handle click events.
+    z-index: 10
+
+
+.category-view
+  font-family: Arial
+  font-weight: 700
+  text-shadow: 15px 15px black
+
+
+.side
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  border: 10px solid black
+  background: $blue
+
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+  &.back
+    -webkit-transform: rotateY(180deg)
+    .vertical-align-view
+      padding: 30px
+      font-size: 150px
+      position: relative
+      top: -50px
+
+.vertical-align-view
+  display: table-cell
+  vertical-align: middle
+  -webkit-transform-style: preserve-3d
+
+.price
+  color: #daa520
+  text-shadow: 20px 20px black
+  font-family: Impact
+  font-size: 250px
+

@@ -1,0 +1,4 @@
+.side
+  Embardy.VerticalAlignView
+    p = name
+    
