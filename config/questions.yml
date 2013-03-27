@@ -1,78 +1,79 @@
 categories:
-  - name: Gnarly Happenings
+  - name: Views
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: This View hook fires after a view's element has been inserted into the DOM.
+      answer: didInsertElement
+    - question: Use this property to specify a view's DOM element type other than div.
+      answer: tagName
+    - question: This View class is useful for manually managing a view hierarchy.
+      answer: Ember.ContainerView
+    - question: This is the opposite of the didInsertElement hook.
+      answer: willDestroyElement
+    - question: You can schedule operations on this run loop queue to fire after DOM elements have rendered.
+      answer: afterRender
 
-  - name: Cool shit
+  - name: Contributing
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: You should always try to create one of these when filing an issue to demonstrate the bug/problem.
+      answer: jsFiddle / JSBin / breaking test case
+    - question: Every behavior-changing pull request should come with some of these.
+      answer: Test cases
+    - question: In the Ember repo, this rake task rebuilds Ember
+      answer: rake dist
+    - question: This is an Ember-powered public forum for discussing Ember features and ideas
+      answer: http://discuss.emberjs.com/
+    - question: This Ember library is probably where you should be focusing all your contributing energies. 
+      answer: Ember Data
 
-  - name: Hot dog
+  - name: Application Miscellany
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: This scheduling mechanism is what drives data-binding in Ember.
+      answer: The Run Loop
+    - question: Use this property to give controllers access to specific other controllers.
+      answer: needs
+    - question: This mechanism is responsible for controllers all having a router property.
+      answer: (Type) injections
+    - question: This data structure is used for registering classes for dependency injection
+      answer: The container
+    - question: You can call these Application methods to defer and advance app initialization.
+      answer: App.deferReadiness() and App.advanceReadiness()
 
-  - name: Thingeroo
+  - name: The Router
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: This function is the entry point for drawing out your application's routes.
+      answer: App.Router.map
+    - question: Use this handlebars helper to nest content provided by child/leaf routes.
+      answer: outlet
+    - question: Override this Route hook to convert a dynamic route segment to a context object that'll be passed to the controller.
+      answer: model
+    - question: These public API Route hooks fire when entering and exiting a route, respectively.
+      answer: activate / deactivate
+    - question: If model returns one of these during a URL navigation, the router will temporarily pause the transition.
+      answer: A Promise
 
-  - name: Ember Stuff
+  - name: Ember-Handlebars
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: This helper can be used to disable the default auto-updating behavior of data bindings.
+      answer: unbound
+    - question: Use this function to declare your own bound Handlebars helpers
+      answer: Ember.registerBoundHelper
+    - question: This helper will insert a view into the template and attach it to a controller.
+      answer: render
+    - question: When using {{each}}, this option will link each rendered item with its own instantiated controller.
+      answer: itemController="..."
+    - question: This Handlebars/Ember-compatible templating language offers an indented alternative to Handlebars syntax.
+      answer: Emblem.js
 
-  - name: Borf
+  - name: Misc
     questions:
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
-    - question: This was the so and so of the such and such.
-      answer: Gnalery
+    - question: This is the name of Ember's bespectacled rodent mascot.
+      answer: Tomster
+    - question: This service (which uses an Ember.js front-end) verifies that Github PRs pass all test cases.
+      answer: Travis
+    - question: Ember creators Tom Dale and Yehuda Katz founded this company in San Francisco
+      answer: Tilde
+    - question: Coined by Angular.js, this scope-related word is a favorite trolling target among Ember enthusiasts.
+      answer: Transclusion
+    - question: Tom Dale retweets this celebrity more often he tweets about code.
+      answer: Rebecca Black
+

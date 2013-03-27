@@ -26,3 +26,5 @@ gem 'bourbon', git: "https://github.com/thoughtbot/bourbon.git"
 gem 'jquery-rails'
 gem 'ember-rails'
 gem 'emblem-rails'
+
+gem 'ember-source', path: '../gits/ember.js'
