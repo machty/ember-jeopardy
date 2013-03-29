@@ -35,6 +35,14 @@ Embardy.Viewport = Em.Object.extend
   height: 0
 
 
+#Embardy.register 'viewport:main', Embardy.Viewport
+#Ember.Application.initializer
+  #name: 'viewport'
+  #initialize: (container) ->
+    #container.typeInjection 'view', 'viewport', 'viewport:main'
+
+
+
 # A type injection would be nice here, but Ember doesn't offer
 # 100% support for it for Ember.View yet. This makes it so that
 # all instances of Ember.View and subclasses will have

@@ -6,12 +6,6 @@ GIT
       sass (>= 3.2.0)
       thor
 
-PATH
-  remote: ../gits/ember.js
-  specs:
-    ember-source (1.0.0.rc1.2)
-      handlebars-source (>= 1.0.0.rc3, < 1.0.0.rc4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,6 +61,8 @@ GEM
       ember-source
       execjs (>= 1.2)
       railties (>= 3.1)
+    ember-source (0.0.3)
+      handlebars-source (>= 1.0.0.rc3, < 1.0.0.rc4)
     emblem-rails (0.1.0)
       barber-emblem (~> 0.1.1)
       ember-rails (~> 0.11.1)
@@ -147,7 +143,6 @@ DEPENDENCIES
   bourbon!
   coffee-rails (~> 4.0.0.beta1)
   ember-rails
-  ember-source!
   emblem-rails
   jbuilder (~> 1.0.1)
   jquery-rails

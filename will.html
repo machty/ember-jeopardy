@@ -1,0 +1,54 @@
+<html><head>
+      
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <style type="text/css">
+      body {
+        background: #FFCCCC;
+      }
+
+      .rung {
+        height: 100px;
+        background-color: #0000FF;
+        /*background: rgba(0,0,255,0.5);*/
+        margin-top: -10px;
+        margin-bottom: -10px;
+        z-index: 5;
+        position: relative;
+        border: 1px solid black;
+      }
+
+      iframe {
+        width: 100%;
+      }
+      
+    </style>
+      
+      </head><body><div>
+
+
+  <p>Hello</p>
+
+
+  <div class="rung"></div>
+  <iframe id="some-id" src="http://0.0.0.0:1337/inner.html" height="300" frameborder="0"></iframe>
+
+
+      <script type="text/javascript">
+
+        var iframe = $("iframe#some-id")[0];
+        iframe.doIt = function() {
+          alert("it works");
+        };
+
+        setTimeout(function() {
+          iframe.contentWindow.notifyIframeElement("ALEX");
+        }, 1000);
+        //alert("funciona");
+      </script>
+
+
+  <div class="rung"></div>
+</div>
+
+
+</body></html>

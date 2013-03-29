@@ -7,8 +7,8 @@ categories:
       answer: tagName
     - question: This View class is useful for manually managing a view hierarchy.
       answer: Ember.ContainerView
-    - question: This is the opposite of the didInsertElement hook.
-      answer: willDestroyElement
+    - question: DAILY QUADRUPLE!!!!!!! Cory Forsyth presents "Dragging and Dropping in Ember"
+      answer: na
     - question: You can schedule operations on this run loop queue to fire after DOM elements have rendered.
       answer: afterRender
 
@@ -22,19 +22,19 @@ categories:
       answer: rake dist
     - question: This is an Ember-powered public forum for discussing Ember features and ideas
       answer: http://discuss.emberjs.com/
-    - question: This Ember library is probably where you should be focusing all your contributing energies. 
-      answer: Ember Data
+    - question: DAILY QUADRUPLE!!!!! Matt Rogish presents "Ember Model Generation from Rails Serializers"
+      answer: n/a
 
-  - name: Application Miscellany
+  - name: Ember Application Architecture
     questions:
     - question: This scheduling mechanism is what drives data-binding in Ember.
       answer: The Run Loop
     - question: Use this property to give controllers access to specific other controllers.
       answer: needs
+    - question: DAILY QUADRUPLE!!!!!!! Chris Tse presents "Oasis.js"
+      answer: n/a
     - question: This mechanism is responsible for controllers all having a router property.
       answer: (Type) injections
-    - question: This data structure is used for registering classes for dependency injection
-      answer: The container
     - question: You can call these Application methods to defer and advance app initialization.
       answer: App.deferReadiness() and App.advanceReadiness()
 
@@ -64,14 +64,14 @@ categories:
     - question: This Handlebars/Ember-compatible templating language offers an indented alternative to Handlebars syntax.
       answer: Emblem.js
 
-  - name: Misc
+  - name: Culture
     questions:
     - question: This is the name of Ember's bespectacled rodent mascot.
       answer: Tomster
     - question: This service (which uses an Ember.js front-end) verifies that Github PRs pass all test cases.
       answer: Travis
-    - question: Ember creators Tom Dale and Yehuda Katz founded this company in San Francisco
-      answer: Tilde
+    - question: DAILY QUADRUPLE!!!!!! Michael Madrid presents "Crambear -- Flashcards in Ember.js"
+      answer: n/a
     - question: Coined by Angular.js, this scope-related word is a favorite trolling target among Ember enthusiasts.
       answer: Transclusion
     - question: Tom Dale retweets this celebrity more often he tweets about code.

@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Inner</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  </head>
+  <body>
+      <script type="text/javascript">
+
+        window.notifyIframeElement = function(arg) {
+          alert("I have been notified with: " + arg);
+        };
+
+        window.frameElement.doIt();
+      </script>
+
+    <h1>Omg</h1>    
+  </body>
+</html>
+

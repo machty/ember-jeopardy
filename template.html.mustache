@@ -1,0 +1,35 @@
+<script type="text/javascript" src="somecdn/jquery-carousel.js">
+
+
+Nokogiri
+
+
+
+
+
+var old$ = $;
+$ = sandboxedJqueryFunction;
+
+
+
+
+// inside m
+var DICTIONARY = { carousel_items: [ { title: "thing" }, { title: "thing2" } ] };
+
+<div class="carousel-items">
+  {{#DICTIONARY.carousel_items}}
+    <h1>Title is {{title}}</h1>
+  {{/DICTIONARY.carousel_items}}
+</div>
+
+$(".carousel-items").hide()
+
+$("#whatever-container-div-id .carousel-items")
+
+
+
+requirePlugin("jquery-carousel", "https://github.com/jquery-carousel/dist/jquery-carousel.js");
+
+
+
+

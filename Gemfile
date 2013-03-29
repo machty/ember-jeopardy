@@ -27,4 +27,3 @@ gem 'jquery-rails'
 gem 'ember-rails'
 gem 'emblem-rails'
 
-gem 'ember-source', path: '../gits/ember.js'
