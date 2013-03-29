@@ -103,4 +103,8 @@ Embardy.QuestionController = Ember.ObjectController.extend
     gridController.set "activeQuestionController", @
     @set 'selected', true
 
+  revealed: false
+  revealAnswer: ->
+    @set("revealed", true)
+
 

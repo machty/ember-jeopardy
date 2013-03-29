@@ -4,5 +4,9 @@
       span.price $#{price}
 
 .side.back
+  a.reveal-answer
+    | Answer
+    span : #{answer}
+  
   Embardy.VerticalAlignView
     span = question
