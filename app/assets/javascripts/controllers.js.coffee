@@ -47,19 +47,7 @@ Embardy.QuestionController = Ember.ObjectController.extend
     # caches it. If it didn't cache, it might continue to
     # increment the current index value on ColumnController
     # and lead to incorrect results.
-
-    # Note the `target.target` is not ideal, but is an 
-    # alternative to using the presently incomplete
-    # {{control}} helper, which would allow us to rely
-    # on controller/subcontainer hierarchy logic to
-    # more directly query values on the parent controller.
-    # `target.target` works because when `itemController`s
-    # are specified in Handlebars, the `itemController`s'
-    # `target` properties get set to the parent controller,
-    # so you can just follow the chain to the controller you
-    # need. Again, brittle, but works for the time being 
-    # until {{control}} is ready for prime time.
-    row = @get("_row") || this.get('target.target.itemIndex')
+    row = @get("_row") || this.get('parentController.itemIndex')
     @set("_row", row)
     row
   ).property()
@@ -69,7 +57,7 @@ Embardy.QuestionController = Ember.ObjectController.extend
     (@get("row") + 1)* 200
   ).property()
 
-  column: Em.computed.alias('target.target.column')
+  column: Em.computed.alias('parentController.column')
 
   selected: false
   answered: false
