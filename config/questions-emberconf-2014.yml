@@ -1,0 +1,79 @@
+categories:
+  - name: Views
+    questions:
+    - question: This View hook fires after a view's element has been inserted into the DOM.
+      answer: What is "didInsertElement"?
+    - question: Use this property to specify a view's DOM element type other than div.
+      answer: What is "tagName"?
+    - question: This View class is useful for manually managing a view hierarchy.
+      answer: What is Ember.ContainerView?
+    - question: In Ember views, you should do clean up for code you called during "didInsertElement" in this method.
+      answer: What is "willDestroyElement"?
+    - question: You can schedule operations on this run loop queue to fire after DOM elements have rendered.
+      answer: What is afterRender?
+
+  - name: Contributing
+    questions:
+    - question: You should always try to create one of these when filing an issue to demonstrate the bug/problem.
+      answer: What is a jsFiddle / JSBin / breaking test case?
+    - question: Every behavior-changing pull request should come with some of these.
+      answer: What are tests cases?
+    - question: Confusing documentation is considered to be this by the core team
+      answer: What is a bug?
+    - question: New feature ideas should be discussed first here, on an Ember-powered public forum written in part by @evil_trout
+      answer: What is discuss.emberjs.com
+    - question: As we learned from @rwjblue, new Ember feature names should be prefixed with this.
+      answer: What is the package name?
+
+  - name: Ember Application Architecture
+    questions:
+    - question: This scheduling mechanism is what drives data-binding in Ember.
+      answer: What is the Run Loop?
+    - question: Use this property to give controllers access to specific other controllers.
+      answer: What is "needs"?
+    - question: You would mix this in to allow your Ember object to fire events that other objects can subscribe to.
+      answer: What is Ember.Evented?
+    - question: This mechanism is responsible for routes having a "store" property.
+      answer: What are (Type) injections?
+    - question: To change how classes are found by Ember, use a custom instance of this.
+      answer: What is the resolver?
+
+  - name: The Router
+    questions:
+    - question: This function is the entry point for drawing out your application's routes.
+      answer: What is Router.map
+    - question: Use this handlebars helper to nest content provided by child/leaf routes.
+      answer: What is "outlet"?
+    - question: Override this Route hook to convert a dynamic route segment to a context object that'll be passed to the controller.
+      answer: What is "model"?
+    - question: These public API Route hooks fire when entering and exiting a route, respectively.
+      answer: What are "activate" and "deactivate"?
+    - question: If model returns one of these during a URL navigation, the router will temporarily pause the transition.
+      answer: What is a "promise"?
+
+  - name: Ember-Handlebars
+    questions:
+    - question: This helper can be used to disable the default auto-updating behavior of data bindings.
+      answer: What is "unbound"?
+    - question: Use this function to declare your own bound Handlebars helpers
+      answer: What is "Ember.registerBoundHelper"?
+    - question: This helper will insert a view into the template and attach it to a controller.
+      answer: What is "render"?
+    - question: When using {{each}}, this option will link each rendered item with its own instantiated controller.
+      answer: What is itemController="..."
+    - question: This will no longer be a runtime dependency when HTMLBars ships
+      answer: What is jQuery / handlebars-runtime?
+
+  - name: Culture
+    questions:
+    - question: Ember started life as 2.0 of this Javascript framework.
+      answer: What is Sproutcore?
+    - question: The Ember mascot, as it appears on emberjs.com is an animal of this type, apparently French.
+      answer: What is a hamster?
+    - question: Tom Dale described this Ember meetup as a "mini-conference every month".
+      answer: What is Ember.js NYC?
+    - question: This service (which uses an Ember.js front-end) verifies that Github PRs pass all test cases.
+      answer: What is Travis.ci?
+    - question: If you're on a Hot Seat, you're probably being interviewed by this ZenDesk employee.
+      answer: Who is DeVaris Brown?
+
